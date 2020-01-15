@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 import ReactLoading from "react-loading";
 
@@ -9,6 +9,7 @@ import ProductListItem from "../ProductListItem";
 export default function ProductList() {
   const products = useSelector(state => state.products.data);
   const loading = useSelector(state => state.products.loading);
+
   return (
     <Container>
       {loading ? (
