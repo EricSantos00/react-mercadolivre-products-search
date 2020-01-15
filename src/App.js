@@ -6,13 +6,13 @@ import store from "./store";
 
 import Header from "./components/Header";
 import GlobalStyle from "./styles/global";
-import List from "./components/List";
+import ProductList from "./components/ProductList";
 
 function App() {
   return (
     <Provider store={store}>
       <Header />
-      <List />
+      <ProductList />
       <GlobalStyle />
     </Provider>
   );

@@ -1,21 +1,16 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 
 import { Container, Logo, SearchForm } from "./styles";
 import { MdSearch } from "react-icons/md";
 
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { searchProduct } from "../../store/ducks/products";
 
 export default function Header() {
-  const products = useSelector(state => state.products);
   const dispatch = useDispatch();
 
   const [search, setSearch] = useState("");
   const focusSearch = useRef(null);
-
-  useEffect(() => {
-    focusSearch.current.focus();
-  }, [products]);
 
   const updateSearch = e => {
     setSearch(e.target.value);
